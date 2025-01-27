@@ -5,7 +5,7 @@ export const Home = () => {
     <div id="home" class="headline">
        <div className="wrapper"> 
        <h1>Sven Lück</h1>
-        <img src="/me.JPG" alt="Sven Lück" class="rounded"/>
+        <img src="./me.JPG" alt="Sven Lück" class="rounded"/>
        </div>
        <div className='content'>
                <h2>Über mich</h2>
