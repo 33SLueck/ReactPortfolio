@@ -1,6 +1,9 @@
 import React , {useState, useEffect, useRef} from "react";
-import { Link, NavLink } from "react-router-dom";
+
 import "./TopNav.css"
+import { HashLink as Link } from "react-router-hash-link";
+
+
 export const TopNav = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   let mobileMenuRef = useRef();
@@ -14,21 +17,21 @@ export const TopNav = () => {
   });
   return (
     <nav ref={mobileMenuRef}>
-      <Link to="/" className="title" onClick={() => {setMenuOpen(false);}}>Home</Link>
+      <Link smooth to="#home" className="title" onClick={() => {setMenuOpen(false);}}>Home</Link>
       <div className="menu" onClick={() => {setMenuOpen(!menuOpen);}}>
         <span></span>
         <span></span>
         <span></span>
       </div>
       <ul className={menuOpen ? "open" : ""}  >
-        <li>
-          <NavLink to="/About" onClick={() => {setMenuOpen(!menuOpen);}}>About</NavLink>
+      <li>
+          <Link smooth to="#services"  onClick={() => {setMenuOpen(!menuOpen);}}>Projekte</Link>
         </li>
         <li>
-          <NavLink to="/Services"  onClick={() => {setMenuOpen(!menuOpen);}}>Services</NavLink>
+        <Link smooth to="#about"  onClick={() => {setMenuOpen(!menuOpen);}}>Skills</Link>
         </li>
         <li>
-          <NavLink to="Contact"  onClick={() => {setMenuOpen(!menuOpen);}}>Contact</NavLink>
+          <Link smooth to="#contact"  onClick={() => {setMenuOpen(!menuOpen);}}>Contact</Link>
         </li>
       </ul>
     </nav>

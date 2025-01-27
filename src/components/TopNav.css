@@ -58,6 +58,7 @@ nav .menu span {
 @media (max-width:500px) {
     nav .menu {
         display:flex;
+        cursor: pointer;
     }
     nav {
         flex-direction: column;

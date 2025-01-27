@@ -1,20 +1,14 @@
 import React ,{ useRef } from 'react';
-import "./services.css"
-export const Services = () => {
-    const sectionFourRef = useRef(null);
 
-    const executeScroll = () => sectionFourRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-      });  
+export const Services = () => {
+  
 
   return (
-    <div>
-        <button onClick={executeScroll }>
- Read Section 4!
-</button>
+    <div id ="services">
+         <div className='content'>
+
        <section>
-        <h2>First Section</h2>
+        <h2>Projekte</h2>
    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor dolores quasi ut doloribus rem molestiae in nihil inventore, nisi quae reiciendis modi nostrum cupiditate cumque quis molestias ea possimus magni rerum consequuntur maxime tempore culpa ratione. Explicabo, nihil! Dolore, autem est consequatur laborum tempore eveniet maiores eius perferendis expedita reprehenderit quasi sapiente aut dolorum in ut porro quod sed nemo nobis quisquam, ad consectetur culpa repudiandae? Quod velit voluptatibus rem, veniam quae architecto asperiores et sint autem totam dolor. Rem eligendi aut repellendus eum maxime molestias corporis iure expedita quas in, temporibus excepturi quae, sint officia, hic ex nam culpa!</div>
    <br/> 
    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor dolores quasi ut doloribus rem molestiae in nihil inventore, nisi quae reiciendis modi nostrum cupiditate cumque quis molestias ea possimus magni rerum consequuntur maxime tempore culpa ratione. Explicabo, nihil! Dolore, autem est consequatur laborum tempore eveniet maiores eius perferendis expedita reprehenderit quasi sapiente aut dolorum in ut porro quod sed nemo nobis quisquam, ad consectetur culpa repudiandae? Quod velit voluptatibus rem, veniam quae architecto asperiores et sint autem totam dolor. Rem eligendi aut repellendus eum maxime molestias corporis iure expedita quas in, temporibus excepturi quae, sint officia, hic ex nam culpa!</div>
@@ -76,7 +70,7 @@ export const Services = () => {
    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor dolores quasi ut doloribus rem molestiae in nihil inventore, nisi quae reiciendis modi nostrum cupiditate cumque quis molestias ea possimus magni rerum consequuntur maxime tempore culpa ratione. Explicabo, nihil! Dolore, autem est consequatur laborum tempore eveniet maiores eius perferendis expedita reprehenderit quasi sapiente aut dolorum in ut porro quod sed nemo nobis quisquam, ad consectetur culpa repudiandae? Quod velit voluptatibus rem, veniam quae architecto asperiores et sint autem totam dolor. Rem eligendi aut repellendus eum maxime molestias corporis iure expedita quas in, temporibus excepturi quae, sint officia, hic ex nam culpa!</div>
    <br/> 
    </section>
-   <section ref={sectionFourRef} className='scroll-mt-100'>
+   <section>
    <h2 >Fourth Section</h2>
    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor dolores quasi ut doloribus rem molestiae in nihil inventore, nisi quae reiciendis modi nostrum cupiditate cumque quis molestias ea possimus magni rerum consequuntur maxime tempore culpa ratione. Explicabo, nihil! Dolore, autem est consequatur laborum tempore eveniet maiores eius perferendis expedita reprehenderit quasi sapiente aut dolorum in ut porro quod sed nemo nobis quisquam, ad consectetur culpa repudiandae? Quod velit voluptatibus rem, veniam quae architecto asperiores et sint autem totam dolor. Rem eligendi aut repellendus eum maxime molestias corporis iure expedita quas in, temporibus excepturi quae, sint officia, hic ex nam culpa!</div>
    <br/> 
@@ -181,6 +175,7 @@ export const Services = () => {
    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor dolores quasi ut doloribus rem molestiae in nihil inventore, nisi quae reiciendis modi nostrum cupiditate cumque quis molestias ea possimus magni rerum consequuntur maxime tempore culpa ratione. Explicabo, nihil! Dolore, autem est consequatur laborum tempore eveniet maiores eius perferendis expedita reprehenderit quasi sapiente aut dolorum in ut porro quod sed nemo nobis quisquam, ad consectetur culpa repudiandae? Quod velit voluptatibus rem, veniam quae architecto asperiores et sint autem totam dolor. Rem eligendi aut repellendus eum maxime molestias corporis iure expedita quas in, temporibus excepturi quae, sint officia, hic ex nam culpa!</div>
    <br/> 
    </section>
+    </div>
     </div>
   )
 }

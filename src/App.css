@@ -3,5 +3,61 @@
   background-color: #fefefe;
   height:100%;
   width:100%;
+  font-size: 16px;
+}
+p, div {
+  font-size: 1.2rem;
 }
 
+#services {
+  scroll-margin-top: 100px;
+ }
+ #home {
+  scroll-margin-top: 100px;
+  
+ }
+ .headline {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+ }
+ #about {
+  scroll-margin-top: 100px;
+ }
+ #contact {
+  scroll-margin-top: 100px;
+ }
+ img.rounded {
+  object-fit: cover;
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  border: 3px solid #b8b8b8;
+  -webkit-box-shadow: 1px 1px 29px 0px #000; 
+  box-shadow: 1px 1px 29px 0px #0009;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(255,255,255);
+background: linear-gradient(0deg, rgba(255,255,255,1) 30%, rgb(234,219,203) 30%);
+}
+.headline p {
+
+  margin:15px auto;
+}
+.wrapper h2 {
+  text-align: center;
+  
+}
+.content {
+  max-width:65vw;
+  margin: 0 auto;
+}
+.content h2 {
+  text-align: center;
+}

@@ -1,20 +1,21 @@
 
-import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import React ,{ useRef } from 'react';
 import {TopNav} from './components/TopNav';
 import { Home , About, Contact, Services } from './components/pages';
-
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
+  
   return (
     <div className="App">  
+    <BrowserRouter>
       <TopNav/>
-      <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/about" element={<About/>}/>
-        <Route path="/contact" element={<Contact/>}/>
-        <Route path="/services" element={<Services/>}/>
-      </Routes>
+      <Home/>
+      <Services/>
+      <About/>
+      <Contact/>
+      </BrowserRouter>
     </div>
   );
 }
