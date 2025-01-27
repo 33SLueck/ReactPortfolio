@@ -2,10 +2,10 @@ import React from 'react'
 
 export const Home = () => {
   return (
-    <div id="home" class="headline">
+    <div id="home" className="headline">
        <div className="wrapper"> 
        <h1>Sven Lück</h1>
-        <img src="./me.JPG" alt="Sven Lück" class="rounded"/>
+        <img src="./me.JPG" alt="Sven Lück" className="rounded"/>
        </div>
        <div className='content'>
                <h2>Über mich</h2>

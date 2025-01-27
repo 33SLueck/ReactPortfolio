@@ -1,6 +1,5 @@
 
 import './App.css';
-import React ,{ useRef } from 'react';
 import {TopNav} from './components/TopNav';
 import { Home , About, Contact, Services } from './components/pages';
 import { BrowserRouter } from 'react-router-dom';
