@@ -89,6 +89,19 @@ box-shadow: -2px 3px 4px 1px #071858;
   padding:20px 20px;
   margin:auto;
 }
+.circles_wrapper {
+  display: flex; 
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.skill_circle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 
 
