@@ -1,5 +1,6 @@
 
 import './App.css';
+import ScrollButton from './components/ScrollButton';
 import {TopNav} from './components/TopNav';
 import { Home , About, Contact, Services } from './components/pages';
 import { BrowserRouter } from 'react-router-dom';
@@ -14,6 +15,7 @@ function App() {
       <Services/>
       <About/>
       <Contact/>
+      <ScrollButton/>
       </BrowserRouter>
     </div>
   );

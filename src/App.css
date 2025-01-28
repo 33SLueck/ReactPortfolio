@@ -123,6 +123,13 @@ nav .menu span {
   font-size: 3rem;
   color:rgb(0,0,0);
 }
+.scroll_button {
+  display:flex;
+  position: fixed;
+  bottom:40px;
+  right:40px
+}
+
 @media (max-width:500px) {
   nav .menu {
       display:flex;
