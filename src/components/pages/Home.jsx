@@ -1,11 +1,14 @@
 import React from 'react'
-
+import Card from '../Card'
+import Cards from '../Cards';
+import profilePicture from '../../assets/me.JPG';
 export const Home = () => {
+  const cardTitle= "Test";
   return (
     <div id="home" className="headline">
        <div className="wrapper"> 
        <h1>Sven Lück</h1>
-        <img src="./me.JPG" alt="Sven Lück" className="rounded"/>
+        <img src={profilePicture} alt="Sven Lück" className="rounded"/>
        </div>
        <div className='content'>
                <h2>Über mich</h2>
@@ -16,6 +19,7 @@ Ich bin stets auf der Suche nach neuen Herausforderungen und Möglichkeiten, mei
 
 Wenn du Interesse an einer Zusammenarbeit hast oder einfach mehr über meine Arbeit erfahren möchtest, freue ich mich über eine Nachricht!</p>
         </div>
+       
         </div>
 
    

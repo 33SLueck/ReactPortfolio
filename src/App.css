@@ -61,8 +61,34 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 30%, rgb(234,219,203) 30%)
 .content h2 {
   text-align: center;
 }
-
-
+.card {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 21%; 
+  background-color: #fefedf;
+  border: 2px solid #cecece; 
+  border-radius: 10%;
+  justify-content: center;
+  align-items: center;
+  -webkit-box-shadow: -2px 3px 4px 1px #071858; 
+box-shadow: -2px 3px 4px 1px #071858;
+}
+.card_img{
+  width: 100%;
+  height:auto;
+}
+.card_content {
+  text-align: center;
+}
+.card_wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+  padding:20px 20px;
+  margin:auto;
+}
 
 
 
@@ -130,6 +156,9 @@ nav .menu span {
   right:40px
 }
 
+.white {
+  color:white;
+}
 @media (max-width:500px) {
   nav .menu {
       display:flex;

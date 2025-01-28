@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="156.36115mm"
+   height="57.838596mm"
+   viewBox="0 0 156.36115 57.838596"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="logo.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.37282197"
+     inkscape:cx="-76.443993"
+     inkscape:cy="175.68707"
+     inkscape:window-width="1346"
+     inkscape:window-height="1040"
+     inkscape:window-x="558"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient2171">
+      <stop
+         style="stop-color:#2ca05a;stop-opacity:1;"
+         offset="0.21797323"
+         id="stop2167" />
+      <stop
+         style="stop-color:#2c98a0;stop-opacity:1;"
+         offset="1"
+         id="stop2169" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2171"
+       id="linearGradient2663"
+       gradientUnits="userSpaceOnUse"
+       x1="32.290535"
+       y1="106.27436"
+       x2="188.65169"
+       y2="106.27436"
+       gradientTransform="translate(0,-67.73337)" />
+  </defs>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-32.290536,-9.6215932)">
+    <path
+       id="path2661"
+       style="fill:url(#linearGradient2663);fill-opacity:1;stroke-width:1.06594;stroke-linecap:round;stroke-linejoin:round"
+       d="m 65.347221,9.6215933 c -18.25677,-1e-6 -33.056685,12.9475017 -33.056686,28.9191377 -5e-6,15.971597 14.799912,28.919005 33.056686,28.919005 13.709568,0 35.303019,-15.80338 45.124069,-24.053695 6.6e-4,5.6e-4 0.002,9.9e-4 0.002,0.002 l 5.40962,-4.92215 c 0.81451,-1.283104 25.95785,-23.541175 40.46819,-23.541175 14.70316,-10e-7 26.6222,10.564401 26.6222,23.596465 0,13.032035 -11.91903,23.596875 -26.6222,23.596875 -11.59651,0 -30.14928,-14.192329 -37.4125,-20.560903 l -5.06347,4.599693 c 10.7962,8.574022 29.41849,21.28334 41.71987,21.28334 18.25677,0 33.05669,-12.947408 33.05668,-28.919005 0,-15.971636 -14.79991,-28.9191387 -33.05668,-28.9191377 -13.79253,0 -35.32598,15.9905667 -45.12407,24.1979957 C 100.67273,25.612544 79.139263,9.6220433 65.346861,9.6220433 Z m -0.756096,5.3226727 c 14.703177,0 40.342065,22.869398 40.505395,23.596465 0.16334,0.727064 -25.802215,23.596875 -40.505395,23.596875 -14.703181,0 -26.622206,-10.56484 -26.622202,-23.596875 1e-6,-13.032064 11.919024,-23.596466 26.622202,-23.596465 z"
+       inkscape:export-filename="..\Users\Sven Lück\Desktop\logo.svg"
+       inkscape:export-xdpi="21.957758"
+       inkscape:export-ydpi="21.957758" />
+  </g>
+</svg>
