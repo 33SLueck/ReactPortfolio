@@ -1,9 +1,14 @@
-
+html, body {
+  background-color: #ececec;
+}
 .App {
   background-color: #ececec;
   height:100%;
   width:100%;
   font-size: 16px;
+}
+p {
+  hyphens: auto;
 }
 p, div {
   font-size: 1.6rem;
@@ -86,11 +91,13 @@ background: linear-gradient(0deg, #ececec 30%, rgb(234,219,203) 30%);
   text-align: center;
 }
 .card {
+  margin:30px 0;
   width: 100%;
   height:auto;
   display: flex;
   flex-direction: column;
   flex: 1 1 21%; 
+  min-width: 250px;
   background-color: #e9e9e9;
   border: 2px solid #cecece; 
   border-radius: 10%;
@@ -103,8 +110,6 @@ transition: flex-basis .5s ease-in-out;
 }
 .card:hover {
   flex-basis: 23%;
- 
-  
 }
 .card_img{
   width: 100%;
@@ -200,7 +205,18 @@ nav .menu span {
   display:flex;
   position: fixed;
   bottom:40px;
-  right:40px
+  right:40px;
+  border-radius: 100%;
+  border: 3px solid transparent;
+}
+.scroll_button:hover {
+  border: 3px solid orange;
+  box-shadow:
+  inset 0 0 20px #fff,      /* inner white */
+  inset 10px 0 40px #b59d12,   /* inner left magenta short */
+  inset -10px 0 75px #b59d12,  /* inner left magenta broad */
+  0 0 20px #fff,            /* outer white */
+  -5px 0 40px #b59d12;
 }
 
 .white {
