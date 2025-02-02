@@ -7,7 +7,8 @@ export default function Cards() {
         <div className='card_wrapper'>
             <Card 
             cardTitle={"Mein Portfolio"} 
-            cardContent={"Eine Portfolio-App, geschrieben in React"}
+            cardCode={"Code"}
+            cardTarget={"Visit"}
             imgSrc={projectLogo} imgAlt={"ein Bild"}/>
             <Card cardTitle={"Test"} cardContent={"Das ist ein Test"}/>
             <Card cardTitle={"Test"} cardContent={"Das ist ein Test"}/>

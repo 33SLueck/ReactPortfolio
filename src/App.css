@@ -1,14 +1,38 @@
 
 .App {
-  background-color: #fefefe;
+  background-color: #ececec;
   height:100%;
   width:100%;
   font-size: 16px;
 }
 p, div {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
+}
+.card_bottom {
+  width: 100%;
+
+  display:flex;
+  padding:15px;
+  justify-content: center;
+  align-items: center;
+}
+.card_bottom a {
+  width: 100%;
+ 
+  
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  
+}
+.card_bottom a:hover {
+color: 	#b59d12;
 }
 
+.seperator {
+  border-left: 1px solid black;
+  height: 80%;
+}
 #services {
   scroll-margin-top: 100px;
  }
@@ -44,10 +68,10 @@ p, div {
   justify-content: center;
   align-items: center;
   background: rgb(255,255,255);
-background: linear-gradient(0deg, rgba(255,255,255,1) 30%, rgb(234,219,203) 30%);
+background: linear-gradient(0deg, #ececec 30%, rgb(234,219,203) 30%);
 }
 .headline p {
-
+  
   margin:15px auto;
 }
 .wrapper h2 {
@@ -62,16 +86,25 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 30%, rgb(234,219,203) 30%)
   text-align: center;
 }
 .card {
+  width: 100%;
+  height:auto;
   display: flex;
   flex-direction: column;
-  flex: 1 0 21%; 
-  background-color: #fefedf;
+  flex: 1 1 21%; 
+  background-color: #e9e9e9;
   border: 2px solid #cecece; 
   border-radius: 10%;
   justify-content: center;
   align-items: center;
   -webkit-box-shadow: -2px 3px 4px 1px #071858; 
 box-shadow: -2px 3px 4px 1px #071858;
+transition: flex-basis .5s ease-in-out;
+
+}
+.card:hover {
+  flex-basis: 23%;
+ 
+  
 }
 .card_img{
   width: 100%;
@@ -116,6 +149,7 @@ align-items: center;
 background-color: #0f172a;
 position: sticky;
 top: 0;
+z-index: 1000;
 }
 nav .title {
   font-size: 1.5rem;
