@@ -1,0 +1,12 @@
+[
+    {
+      "id": 1,
+      "name":  "Sven Lück",
+      "adress":"Ingridpfad 13",
+      "zip" :  "12249",
+      "city" : "Berlin",
+      "email" :"s.lueck33@gmail.com",
+      "phone" :"+49 15174503928"
+    }
+  ]
+  

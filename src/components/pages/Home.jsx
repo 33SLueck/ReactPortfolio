@@ -5,7 +5,7 @@ export const Home = () => {
   useEffect(() => {
       // Lade die JSON-Datei
       const basePath = process.env.REACT_APP_BASE_URL || ''; 
-      fetch(`${basePath}/test.json`)  // Achte darauf, den richtigen Pfad zu verwenden
+      fetch(`${basePath}/home.json`) 
         .then((response) => response.json())
         .then((data) => setArticles(data))
         .catch((error) => console.error('Fehler beim Laden der Daten:', error));
