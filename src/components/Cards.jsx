@@ -6,7 +6,7 @@ export default function Cards() {
   return (
         <div className='card_wrapper'>
             <Card 
-            cardTitle={"Mein Portfolio"} 
+            cardTitle={"Portfolio"} 
             cardCode={"Code"}
             cardTarget={"Visit"}
             imgSrc={projectLogo} imgAlt={"ein Bild"}/>
