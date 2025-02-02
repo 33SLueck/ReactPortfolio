@@ -1,25 +1,29 @@
-import React from 'react'
-import Card from '../Card'
-import Cards from '../Cards';
+import React, { useEffect, useState } from 'react'
 import profilePicture from '../../assets/me.JPG';
 export const Home = () => {
-  const cardTitle= "Test";
+  const [articles, setArticles] = useState([]);
+  useEffect(() => {
+      // Lade die JSON-Datei
+      const basePath = process.env.REACT_APP_BASE_URL || ''; 
+      fetch(`${basePath}/test.json`)  // Achte darauf, den richtigen Pfad zu verwenden
+        .then((response) => response.json())
+        .then((data) => setArticles(data))
+        .catch((error) => console.error('Fehler beim Laden der Daten:', error));
+    }, []);
+  
   return (
     <div id="home" className="headline">
        <div className="wrapper"> 
        <h1>Sven Lück</h1>
         <img src={profilePicture} alt="Sven Lück" className="rounded"/>
        </div>
-       <div className='content'>
-               <h2>Über mich</h2>
-        <p>
-Hallo! Ich bin Sven Lück, web development Student beim Digital Career Institut, sowie ein leidenschaftlicher Softwareentwickler. Für eine starke Grundlage in der Programmierung bilde ich mich stets weiter und investiere viel Zeit in die Verbesserung meiner besteheden Fähigkeiten. Besonders interessiere ich mich für die Entwicklung von Webanwendungen, wobei ich meine Fähigkeiten in HTML, CSS und JavaScript kontinuierlich ausbaue. Zudem arbeite ich mit React und Laravel auf einem semi-professionellen Niveau und freue mich darauf, noch tiefer in moderne Webtechnologien einzutauchen.
-
-Ich bin stets auf der Suche nach neuen Herausforderungen und Möglichkeiten, meine Fähigkeiten zu erweitern und innovative Lösungen zu entwickeln. In meinem Portfolio findest du eine Auswahl an Projekten, die meine Vielseitigkeit und meine Begeisterung für Softwareentwicklung widerspiegeln.
-
-Wenn du Interesse an einer Zusammenarbeit hast oder einfach mehr über meine Arbeit erfahren möchtest, freue ich mich über eine Nachricht!</p>
-        </div>
        
+       {articles.map((article) => (
+         <div className='content' key={article.id}>
+            <h2>{article.title}</h2>
+            <p>{article.content}</p>
+            </div>
+        ))}
         </div>
 
    
