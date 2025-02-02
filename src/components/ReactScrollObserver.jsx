@@ -1,5 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
-
+import React, { useRef, useEffect, useState } from "react";
 
 const ReactScrollObserver = ({ children, onVisibilityChange }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -9,20 +8,20 @@ const ReactScrollObserver = ({ children, onVisibilityChange }) => {
     const handleIntersection = (entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          console.log('Element ist sichtbar!');
-          setIsVisible(true);  // Setzt den Zustand auf sichtbar
-          onVisibilityChange(true);  // Ruft die Callback-Funktion der Elternkomponente auf
+          console.log("Element ist sichtbar!");
+          setIsVisible(true); // Setzt den Zustand auf sichtbar
+          onVisibilityChange(true); // Ruft die Callback-Funktion der Elternkomponente auf
         } else {
-          console.log('Element ist nicht sichtbar!');
+          console.log("Element ist nicht sichtbar!");
           setIsVisible(false); // Setzt den Zustand auf unsichtbar
-          onVisibilityChange(false);  // Ruft die Callback-Funktion der Elternkomponente auf
+          onVisibilityChange(false); // Ruft die Callback-Funktion der Elternkomponente auf
         }
       });
     };
 
     const observer = new IntersectionObserver(handleIntersection, {
       root: null,
-      rootMargin: '0px',
+      rootMargin: "0px",
       threshold: [0.2, 0.5],
     });
 
@@ -41,9 +40,9 @@ const ReactScrollObserver = ({ children, onVisibilityChange }) => {
     <div
       ref={elementRef}
       style={{
-        visibility: isVisible ? 'visible' : 'hidden',
+        visibility: isVisible ? "visible" : "hidden",
         opacity: isVisible ? 1 : 0,
-        transition: 'opacity .5s ease-in-out',
+        transition: "opacity .5s ease-in-out",
       }}
     >
       {children}
@@ -51,4 +50,4 @@ const ReactScrollObserver = ({ children, onVisibilityChange }) => {
   );
 };
 
-export default ReactScrollObserver
+export default ReactScrollObserver;

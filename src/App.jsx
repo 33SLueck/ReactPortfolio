@@ -7,7 +7,6 @@ import { BrowserRouter } from "react-router-dom";
 import ReactScrollObserver from "./components/ReactScrollObserver";
 
 function App() {
-
   const [visibilityStatus, setVisibilityStatus] = useState(false);
 
   const handleVisibilityChange = (isVisible) => {
@@ -19,12 +18,9 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <TopNav />
-
-      
-          <ReactScrollObserver onVisibilityChange={handleVisibilityChange}>
-            <Home />
-          </ReactScrollObserver>
-        
+        <ReactScrollObserver onVisibilityChange={handleVisibilityChange}>
+          <Home />
+        </ReactScrollObserver>
         <ReactScrollObserver onVisibilityChange={handleVisibilityChange}>
           <Services />
         </ReactScrollObserver>
@@ -34,7 +30,7 @@ function App() {
         <ReactScrollObserver onVisibilityChange={handleVisibilityChange}>
           <Contact />
         </ReactScrollObserver>
-          <ScrollButton />
+        <ScrollButton />
       </BrowserRouter>
     </div>
   );
