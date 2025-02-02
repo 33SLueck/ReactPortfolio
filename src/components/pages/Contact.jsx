@@ -1,12 +1,58 @@
-import React from 'react'
+import { useEffect , useState } from "react"
+import React  from 'react'
 
 export const Contact = () => {
+ const [contact, setContact] = useState([]);
+  useEffect(() => {
+        // Lade die JSON-Datei
+        const basePath = process.env.REACT_APP_BASE_URL || ''; 
+        fetch(`${basePath}/contact.json`) 
+          .then((response) => response.json())
+          .then((data) => setContact(data))
+          .catch((error) => console.error('Fehler beim Laden der Daten:', error));
+      }, []);
   return (
     <div id="contact">
-     
-        <div className='content'>
+      <div className='content'>
       <h2>Contact</h2>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta vitae consequuntur amet veniam officia molestias totam distinctio expedita modi, mollitia perspiciatis explicabo ex asperiores culpa, ut deleniti quam odio neque, quae cumque placeat delectus hic ullam possimus! Sunt ipsum placeat molestiae laborum voluptatum repellendus sapiente labore suscipit distinctio veniam. Dicta harum repudiandae consectetur accusamus soluta beatae, enim ab, consequatur itaque similique quod temporibus et repellendus ducimus eligendi explicabo amet perferendis nostrum praesentium natus corrupti. Quia, necessitatibus, numquam, consequuntur tempora ea illo natus ex eos cum ab architecto aliquid maiores laudantium nam! Est, consequatur cumque dolore aut ad officiis, doloribus nam minima in, soluta reprehenderit odit odio. Non voluptatum est libero unde facere voluptate voluptatibus, voluptatem illo minima fugit cum harum dolorum quasi reprehenderit nobis temporibus sint reiciendis consectetur dignissimos veritatis earum quisquam asperiores obcaecati. Ut et id dolorem fuga recusandae, rerum quas illo sapiente ea, deserunt dolor, odit dolores sit! Dicta explicabo eos eligendi, provident quos a sint, id cumque repellendus, asperiores voluptatum ipsam ratione. Quaerat quae, iure aperiam repellat veniam error officiis molestias necessitatibus, illo amet libero nemo quibusdam deleniti similique blanditiis quisquam explicabo ipsum ipsam qui sequi incidunt, alias velit. Eos dolore fuga accusamus. Quas laborum iusto fuga quaerat doloremque vel voluptate, commodi veritatis voluptates porro aut ea facilis soluta sint dolore, impedit molestiae illum tenetur. Doloribus earum, illo iusto, id voluptas maiores facere eaque similique nihil modi totam sequi aliquid soluta adipisci dicta ut. Ex eius quidem nesciunt nobis qui facere earum, veritatis sequi. Dolorem non aspernatur odit architecto, eum culpa eligendi! Officiis rerum dicta pariatur, iste assumenda, in, accusantium architecto maiores deserunt odit saepe. Aperiam, repudiandae! Aliquam at fuga recusandae doloremque facere fugit reiciendis quisquam optio, voluptatibus cum molestias rerum ratione incidunt voluptatem illo voluptatum eveniet dicta cumque architecto, est quis repudiandae corporis consequuntur? Repudiandae ducimus, aut cum officiis quidem culpa explicabo facilis voluptatibus corporis hic ut, distinctio, rerum perferendis itaque placeat fuga deleniti. Maxime alias adipisci saepe corrupti explicabo possimus placeat nobis repudiandae quasi neque molestiae odio illum debitis beatae et, cumque natus voluptate incidunt quia hic dolores recusandae numquam earum? Minima error voluptas ex eligendi iure, cum architecto molestias. Modi dignissimos temporibus tenetur totam eos incidunt repudiandae! Voluptate neque, quas mollitia distinctio culpa recusandae libero alias tempore voluptates deleniti aut maiores vel velit dignissimos, temporibus dolor excepturi voluptatem. Officiis optio quo totam facilis vel quos incidunt cupiditate quis, rem alias dolorum molestias eius recusandae ipsum reiciendis enim, corrupti consequatur blanditiis consequuntur illum iste earum nulla. Rem iure in qui facere enim minus laborum? Minima ex dolor magnam, quos ipsa aliquid quibusdam quis doloremque, pariatur iure officiis blanditiis vel perferendis unde corrupti nam exercitationem voluptatem consequatur inventore ut dicta dolores. Blanditiis reiciendis aliquid autem impedit amet, eveniet deleniti repellat iste illo, soluta, sequi molestias. Quam, illo maxime beatae odio itaque esse similique consequatur explicabo voluptatem molestias sint vero officiis perferendis quaerat unde sequi rerum, inventore, impedit corporis corrupti iusto earum. Atque, qui veniam eveniet rerum cupiditate quia est voluptates optio consequuntur aperiam iusto eum? Aut illum consequuntur totam porro dicta quidem repudiandae incidunt voluptas, dolorem nihil ab pariatur aperiam provident praesentium, accusantium, dolor architecto vitae aliquam autem est deleniti quisquam. Atque ut, totam accusantium adipisci excepturi accusamus in quo voluptatem, molestias labore debitis doloribus amet, maxime nam earum optio explicabo error sint inventore eius maiores odit. Tempora quaerat hic placeat commodi, impedit deserunt quisquam id quasi repellat, ducimus eius omnis tempore illum perferendis corrupti totam ad ipsa quo eos corporis inventore natus minima? Deserunt voluptate ratione temporibus. Molestias ad sint a quisquam, neque error earum porro! Soluta fugit porro, dolores ipsa at quia quibusdam dolore.</p>
+     <div className="contact_wrapper">
+      {contact.map((profile) => (
+        
+          
+           <div className="adressHolder" key={profile.id}>
+            <h3>{profile.name}</h3>
+            <div>
+            <p>{profile.adress}</p>
+            <p>{profile.zip} {profile.city}</p>
+            <a href= {"mailto:" + profile.email}>{profile.email}</a>
+            <p>{profile.phone}</p>
+            </div>
+            </div>
+          
+        ))}
+        <div className="contact_form">
+          
+        <form action="#" method="#" encType="multipart/form-data">
+    
+        <ul className="form_wrapper">
+    <li className="form_row">
+      <label htmlFor="name">Name</label>
+      <input type="text" id="name"/>
+    </li>
+    <li className="form_row">
+      <label htmlFor="email">Email</label>
+      <input type="email" id="email"/>
+    </li>
+    <li className="form_row vertical">
+      <textarea className="textarea_form" rows="3" cols="10" type="text" id="your_messagen"/>
+    </li>
+    <li className="form_row">
+      <button type="submit">Submit</button>
+    </li>
+  </ul>
+  </form>
+        </div>
+       </div>
       </div>
       </div>
   )
