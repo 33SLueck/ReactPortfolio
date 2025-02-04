@@ -40,8 +40,7 @@ const ReactScrollObserver = ({ children, onVisibilityChange }) => {
     <div
       ref={elementRef}
       style={{
-        visibility: isVisible ? "visible" : "hidden",
-        opacity: isVisible ? 1 : 0,
+        filter: isVisible ? "" : "blur(5px)",
         transition: "opacity .5s ease-in-out",
       }}
     >

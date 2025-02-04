@@ -5,6 +5,7 @@ import { TopNav } from "./components/TopNav";
 import { Home, About, Contact, Services } from "./components/pages";
 import { BrowserRouter } from "react-router-dom";
 import ReactScrollObserver from "./components/ReactScrollObserver";
+import Footer from "./components/pages/Footer";
 
 function App() {
   const [visibilityStatus, setVisibilityStatus] = useState(false);
@@ -32,6 +33,7 @@ function App() {
         </ReactScrollObserver>
         <ScrollButton />
       </BrowserRouter>
+      <Footer/>
     </div>
   );
 }
