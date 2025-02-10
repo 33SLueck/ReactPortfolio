@@ -13,8 +13,9 @@ export const Contact = () => {
   }, []);
   return (
     <div id="contact">
+       <h2>Contact</h2>
       <div className="content">
-        <h2>Contact</h2>
+       
         <div className="contact_wrapper">
           {contact.map((profile) => (
             <div className="adressHolder" key={profile.id}>
@@ -28,8 +29,9 @@ export const Contact = () => {
                 <p>{profile.phone}</p>
               </div>
             </div>
-          ))}
-          <div className="contact_form">
+          ))}  
+        </div>
+        <div className="contact_form">
             <form action="#" method="#" encType="multipart/form-data">
               <ul className="form_wrapper">
                 <li className="form_row">
@@ -55,7 +57,6 @@ export const Contact = () => {
               </ul>
             </form>
           </div>
-        </div>
       </div>
     </div>
   );

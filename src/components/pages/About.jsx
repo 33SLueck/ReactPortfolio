@@ -1,154 +1,33 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import CircularSkill from "../CircularSkill";
+export const About = (props) => {
+  const [random, setRandom] = useState(1);
+  const [skillValues, setSkillValues] = useState([]);
+ 
+useEffect(() => {
+    // Lade die JSON-Datei
+    const basePath = process.env.REACT_APP_BASE_URL || "";
+    fetch(`${basePath}/skills.json`)
+      .then((response) => response.json())
+      .then((data) => setSkillValues(data))
+      .catch((error) => console.error("Fehler beim Laden der Daten:", error));
+  }, []);
 
-export const About = () => {
   return (
     <div id="about">
       <div className="content">
         <h2>Skills</h2>
         <div className="circles_wrapper">
-          <div className="skill_circle">
-            <svg width="200" height="200">
-              <g transform="rotate(-90 100 100)">
-                <circle
-                  r="70"
-                  cx="100"
-                  cy="100"
-                  fill="transparent"
-                  stroke="lightgrey"
-                  strokeWidth="2rem"
-                  strokeDasharray="439.8"
-                  strokeDashoffset="0"
-                ></circle>
-                <circle
-                  r="70"
-                  cx="100"
-                  cy="100"
-                  fill="transparent"
-                  stroke="blue"
-                  strokeWidth="2rem"
-                  strokeDasharray="439.8"
-                  strokeDashoffset="66"
-                ></circle>
-              </g>
-              <text
-                x="50%"
-                y="50%"
-                dominantBaseline="central"
-                textAnchor="middle"
-              >
-                85%
-              </text>
-            </svg>
-            <p>HTML</p>
-          </div>
-
-          <div className="skill_circle">
-            <svg width="200" height="200">
-              <g transform="rotate(-90 100 100)">
-                <circle
-                  r="70"
-                  cx="100"
-                  cy="100"
-                  fill="transparent"
-                  stroke="lightgrey"
-                  strokeWidth="2rem"
-                  strokeDasharray="439.8"
-                  strokeDashoffset="0"
-                ></circle>
-                <circle
-                  r="70"
-                  cx="100"
-                  cy="100"
-                  fill="transparent"
-                  stroke="green"
-                  strokeWidth="2rem"
-                  strokeDasharray="439.8"
-                  strokeDashoffset="110"
-                ></circle>
-              </g>
-              <text
-                x="50%"
-                y="50%"
-                dominantBaseline="central"
-                textAnchor="middle"
-              >
-                75%
-              </text>
-            </svg>
-            <p>CSS</p>
-          </div>
-
-          <div className="skill_circle">
-            <svg width="200" height="200">
-              <g transform="rotate(-90 100 100)">
-                <circle
-                  r="70"
-                  cx="100"
-                  cy="100"
-                  fill="transparent"
-                  stroke="lightgrey"
-                  strokeWidth="2rem"
-                  strokeDasharray="439.8"
-                  strokeDashoffset="0"
-                ></circle>
-                <circle
-                  r="70"
-                  cx="100"
-                  cy="100"
-                  fill="transparent"
-                  stroke="orange"
-                  strokeWidth="2rem"
-                  strokeDasharray="439.8"
-                  strokeDashoffset="220"
-                ></circle>
-              </g>
-              <text
-                x="50%"
-                y="50%"
-                dominantBaseline="central"
-                textAnchor="middle"
-              >
-                50%
-              </text>
-            </svg>
-            <p>Javascript</p>
-          </div>
-
-          <div className="skill_circle">
-            <svg width="200" height="200">
-              <g transform="rotate(-90 100 100)">
-                <circle
-                  r="70"
-                  cx="100"
-                  cy="100"
-                  fill="transparent"
-                  stroke="lightgrey"
-                  strokeWidth="2rem"
-                  strokeDasharray="439.8"
-                  strokeDashoffset="0"
-                ></circle>
-                <circle
-                  r="70"
-                  cx="100"
-                  cy="100"
-                  fill="transparent"
-                  stroke="purple"
-                  strokeWidth="2rem"
-                  strokeDasharray="439.8"
-                  strokeDashoffset="220"
-                ></circle>
-              </g>
-              <text
-                x="50%"
-                y="50%"
-                dominantBaseline="central"
-                textAnchor="middle"
-              >
-                50%
-              </text>
-            </svg>
-            <p>React</p>
-          </div>
+        {skillValues.map((skill) => (
+         <CircularSkill key={skill.id}
+         size={100}
+         strokeWidth={2}
+         percentage= {props.isVisible ? skill.percentage : 0}      
+         title={skill.title}
+         highlightColor={skill.color}
+       />
+      ))}
+          
         </div>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis

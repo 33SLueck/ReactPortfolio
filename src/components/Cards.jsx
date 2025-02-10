@@ -27,8 +27,10 @@ export default function Cards() {
         />
       ))}
      
-      <Card cardTitle={"Test"} cardContent={"Das ist ein Test"} />
-      <Card cardTitle={"Test"} cardContent={"Das ist ein Test"} />
+      <Card cardTitle={"A Project"}  imgSrc={"/ReactPortfolio/logo.svg"}  cardCode={"Code"}
+          cardTarget={"Visit"} cardContent={"Das ist ein Test"} />
+       <Card cardTitle={"A Project"}  imgSrc={"/ReactPortfolio/logo.svg"}  cardCode={"Code"}
+          cardTarget={"Visit"} cardContent={"Das ist ein Test"} />
      
     </div>
   );

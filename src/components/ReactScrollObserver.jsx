@@ -6,8 +6,8 @@ const ReactScrollObserver = ({ children, onVisibilityChange }) => {
 
   useEffect(() => {
     const handleIntersection = (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
+     
+        if (entries[0].isIntersecting) {
           console.log("Element ist sichtbar!");
           setIsVisible(true); // Setzt den Zustand auf sichtbar
           onVisibilityChange(true); // Ruft die Callback-Funktion der Elternkomponente auf
@@ -16,13 +16,13 @@ const ReactScrollObserver = ({ children, onVisibilityChange }) => {
           setIsVisible(false); // Setzt den Zustand auf unsichtbar
           onVisibilityChange(false); // Ruft die Callback-Funktion der Elternkomponente auf
         }
-      });
+      
     };
 
     const observer = new IntersectionObserver(handleIntersection, {
       root: null,
       rootMargin: "0px",
-      threshold: [0.2, 0.5],
+     threshold: [0.2]
     });
 
     if (elementRef.current) {
@@ -40,7 +40,7 @@ const ReactScrollObserver = ({ children, onVisibilityChange }) => {
     <div
       ref={elementRef}
       style={{
-        filter: isVisible ? "" : "blur(5px)",
+       
         transition: "opacity .5s ease-in-out",
       }}
     >
