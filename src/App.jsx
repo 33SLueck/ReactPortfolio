@@ -19,18 +19,12 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <TopNav />
-        <ReactScrollObserver onVisibilityChange={handleVisibilityChange}>
           <Home />
-        </ReactScrollObserver>
-        <ReactScrollObserver onVisibilityChange={handleVisibilityChange}>
           <Services />
-        </ReactScrollObserver>
         <ReactScrollObserver onVisibilityChange={handleVisibilityChange}>
-          <About />
+          <About isVisible={visibilityStatus}/>
         </ReactScrollObserver>
-        <ReactScrollObserver onVisibilityChange={handleVisibilityChange}>
           <Contact />
-        </ReactScrollObserver>
         <ScrollButton />
       </BrowserRouter>
       <Footer/>

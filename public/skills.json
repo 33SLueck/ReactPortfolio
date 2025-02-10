@@ -1,0 +1,26 @@
+[
+    {
+      "id": 1,
+      "color":  "blue",
+      "percentage": 85,
+      "title": "HTML"
+    },
+    {
+        "id": 2,
+        "color":  "green",
+        "percentage": 75,
+        "title": "CSS"
+      },
+      {
+        "id": 3,
+        "color":  "orange",
+        "percentage": 50,
+        "title": "Javascript"
+      },
+      {
+        "id": 4,
+        "color":  "purple",
+        "percentage": 50,
+        "title": "React"
+      }
+  ]
