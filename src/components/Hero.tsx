@@ -1,9 +1,13 @@
+import React from 'react'
+import CanvasBackground from './CanvasBackground'
+
 const Hero = () => {
   return (
-    <section id="hero" className="bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 text-white">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32">
+    <section id="hero" className="relative bg-gradient-to-br from-gray-900 via-purple-800 to-gray-800 text-white overflow-hidden min-h-screen flex items-center">
+      <CanvasBackground />
+      
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center">
-          {/* Profile Image */}
           <div className="mb-8 flex justify-center">
             <div className="relative">
               <img 
@@ -11,11 +15,9 @@ const Hero = () => {
                 alt="Sven Lück - Developer"
                 className="w-32 h-32 sm:w-40 sm:h-40 rounded-full border-4 border-white shadow-2xl object-cover"
               />
-              {/* Optional: Add a decorative ring */}
               <div className="absolute inset-0 rounded-full ring-4 ring-blue-300 ring-opacity-30"></div>
             </div>
           </div>
-
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
             Hi, I'm Sven Lück
           </h2>
