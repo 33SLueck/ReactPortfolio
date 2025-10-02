@@ -1,11 +1,10 @@
-import React from 'react'
 
 const Nav = () => {
   return (
      <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <h1 className="text-2xl font-bold text-gray-900 hover:text-blue-600 transition-colors">
-              Your Portfolio
+              Sven Lück
             </h1>
             <ul className="flex space-x-8">
               <li>
